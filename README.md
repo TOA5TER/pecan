@@ -119,7 +119,7 @@ local-only: those hooks live on your machine and are never committed to this rep
 
 The intended future path is a separate, git-tracked overlay repo per org (e.g.
 `{yourorg}-pecan`) holding that org's real hooks and a config template, checked out
-independently and copied or symlinked into a pecan checkout. That keeps pecan generic
+independently and copied or synchronized into a pecan checkout. That keeps pecan generic
 while giving org-specific toolchains and mounts a reviewable home. Keep actual secret
 values in a separate ignored env file even in that overlay. Automated overlay wiring
 is not yet implemented; for now, use the local `hooks.d/` path above.
