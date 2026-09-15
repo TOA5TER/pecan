@@ -19,9 +19,13 @@ variable "PECAN_HOME" {
   default = "/home/pecan"
 }
 
+variable "PECAN_IMAGE" {
+  default = "pecan:latest"
+}
+
 target "pecan" {
   dockerfile = "Dockerfile"
-  tags       = ["pecan:latest"]
+  tags       = [PECAN_IMAGE]
   args = {
     BASE_IMAGE     = PECAN_BASE_IMAGE
     EXTRA_PACKAGES = PECAN_EXTRA_PACKAGES

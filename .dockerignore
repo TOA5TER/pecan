@@ -1,0 +1,7 @@
+.git
+.scratch
+.worktrees
+pecan.env
+docker-bake.override.hcl
+*.md
+test_*.sh

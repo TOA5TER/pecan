@@ -14,6 +14,7 @@ PECAN_BASE_IMAGE=node:24-bookworm-slim
 PECAN_EXTRA_PACKAGES="jq curl"
 PECAN_USER=testuser
 PECAN_HOME=/home/testuser
+PECAN_IMAGE=example/pecan:test
 EOF
 
 set -a
@@ -45,6 +46,7 @@ check_contains '"BASE_IMAGE": "node:24-bookworm-slim"'
 check_contains '"EXTRA_PACKAGES": "jq curl"'
 check_contains '"PECAN_USER": "testuser"'
 check_contains '"PECAN_HOME": "/home/testuser"'
+check_contains '"example/pecan:test"'
 
 if [ "$fail" -ne 0 ]; then
   echo "❌ docker-bake.hcl config resolution test failed"

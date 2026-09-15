@@ -1,3 +1,5 @@
 #!/bin/sh
 # Example run hook — rename without .stub, chmod +x; see README.md "Writing a custom hook".
-# pecan_add_run_arg "-v" "$HOME/.gitconfig:$PECAN_HOME/.gitconfig:ro"
+# pecan_add_run_arg --mount "type=bind,src=$HOME/.gitconfig,dst=$PECAN_HOME/.gitconfig,readonly"
+# pecan_add_run_arg -e GH_TOKEN
+# pecan_set_start_command "/usr/local/bin/my-startup && exec sleep infinity"
