@@ -1,0 +1,4 @@
+#!/bin/sh
+# Example build hook — rename without .stub, chmod +x; see README.md "Writing a custom hook".
+# Build hooks run as root after PECAN_USER and PECAN_HOME exist.
+# apt-get update && apt-get install -y --no-install-recommends jq
